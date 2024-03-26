@@ -1,11 +1,11 @@
 import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 function SendMessage({scroll}) {
     const [message,setMessage]=useState("");
     const HandleChange=(event)=>{
-        setMessage(e.target.value);
+        setMessage(event.target.value);
     };
     const sendMsg=async (event)=>{
         event.preventDefault();
@@ -30,7 +30,7 @@ function SendMessage({scroll}) {
         <input type='text' placeholder='Enter a message' value={message} onChange={HandleChange}/>
         <button type='submit' >Send</button>
     </form>
-  )
-}
+  );
+};
 
-export default SendMessage
+export default SendMessage;

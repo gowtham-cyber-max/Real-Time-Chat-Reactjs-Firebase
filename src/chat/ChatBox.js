@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import {
     query,
     collection,
@@ -45,4 +45,4 @@ function ChatBox() {
   )
 }
 
-export default ChatBox
+export default ChatBox;

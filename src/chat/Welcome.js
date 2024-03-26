@@ -1,6 +1,6 @@
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
-import React from 'react'
+import React from 'react';
 
 function Welcome() {
     const gogleSignIn=()=>{

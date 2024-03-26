@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Chat_app from './chat/Chat_app';
+import chat_app from './chat/chat_app';
 
 
 
 function App() {
   return (
     <div className="App">
-    <Chat_app/>
+    <chat_app/>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import NavBar from './NavBar'
 import Welcome from "./Welcome";
 import ChatBox from "./ChatBox";
 
-function Chat_app() {
+function App1() {
     const [user] = useAuthState(auth);
   return (
     <div>
@@ -15,4 +15,4 @@ function Chat_app() {
   )
 };
 
-export default Chat_app;
+export default App1;
