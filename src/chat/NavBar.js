@@ -1,5 +1,5 @@
 import React from 'react';
-import { auth } from "../firebase";
+import { auth } from "./Fire_Base";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 function NavBar() {
@@ -9,7 +9,7 @@ function NavBar() {
        signInWithRedirect(auth,provider);
     };
     const SignOut=()=>{
-        auth.signout();
+        auth.signOut();
     };
   return (
     <nav className="nav-bar">

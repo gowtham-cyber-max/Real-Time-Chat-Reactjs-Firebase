@@ -1,4 +1,4 @@
-import { auth } from "../firebase";
+import { auth } from "./Fire_Base";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import React from 'react';
 
@@ -10,7 +10,7 @@ function Welcome() {
   return (
     <div>
         <h2>Welcome to chat</h2>
-        <button>SignIn</button>
+        <button onClick={gogleSignIn}>SignIn</button>
     </div>
   )
 }

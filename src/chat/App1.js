@@ -1,9 +1,10 @@
-import { auth } from "./firebase";
+import { auth } from "./Fire_Base";
 import { useAuthState } from "react-firebase-hooks/auth";
 import React from 'react'
 import NavBar from './NavBar'
 import Welcome from "./Welcome";
 import ChatBox from "./ChatBox";
+
 
 function App1() {
     const [user] = useAuthState(auth);

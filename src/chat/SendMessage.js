@@ -1,4 +1,4 @@
-import { auth, db } from "../firebase";
+import { auth, db } from "./Fire_Base";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import React, { useState } from 'react';
 
@@ -13,7 +13,9 @@ function SendMessage({scroll}) {
             alert("Enter a message please");
             return;
         }
-        const {uid,displayName,img_url}=auth.currentuser;
+        const uid=auth.currentUser["accessToken"];
+        const displayName = auth.currentUser["displayName"];
+        const img_url = auth.currentUser["photoURL"]
         await addDoc(collection(db,"messages"),{
             text:message,
             name:displayName,

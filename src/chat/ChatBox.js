@@ -5,22 +5,26 @@ import {
     orderBy,
     onSnapshot,
     limit,
-    QuerySnapshot,
+    QuerySnapshot
   } from "firebase/firestore";
-  import { db } from "../firebase";
+  import { db } from './Fire_Base';
   import Message from './Message';
   import SendMessage from './SendMessage';
+
+
+  
 function ChatBox() {
     const [messages,setMessages]=useState([]);
     const scroll=useRef();
     useEffect(()=>{
         const q = query(
             collection(db,"messages"),
-            orderBy("createdAt","desc"),
+            orderBy("createAt","desc"),
             limit(50)
         );
         const unsubscribe=onSnapshot(q,(QuerySnapshot)=>{
             const fetchedMessages=[];
+            console.log(QuerySnapshot);
             QuerySnapshot.forEach((doc)=>{
                 fetchedMessages.push({ ...doc.data() ,  id: doc.id });
             });
@@ -36,7 +40,7 @@ function ChatBox() {
     },[])
   return (
     <div>
-        {messages ?.map((message)=>(
+        {messages?.map((message)=>(
             <Message key={message.id} message={message}/>
         ))}
         <span ref={scroll}></span>
