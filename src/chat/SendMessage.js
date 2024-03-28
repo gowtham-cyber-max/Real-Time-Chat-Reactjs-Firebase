@@ -13,7 +13,8 @@ function SendMessage({scroll}) {
             alert("Enter a message please");
             return;
         }
-        const uid=auth.currentUser["accessToken"];
+        console.log(auth.currentUser)
+        const uid=auth.currentUser["uid"];
         const displayName = auth.currentUser["displayName"];
         const img_url = auth.currentUser["photoURL"]
         await addDoc(collection(db,"messages"),{
@@ -21,7 +22,7 @@ function SendMessage({scroll}) {
             name:displayName,
             avatar:img_url,
             createAt:serverTimestamp(),
-            uid,
+            uid:uid,
         })
         setMessage("");
         scroll.current.scrollIntoView({behavior:"smooth"});

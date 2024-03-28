@@ -1,0 +1,14 @@
+.chat-bubble{
+    display: flex;
+}
+
+.logo {
+	border-radius: 50%;
+    max-height: 50px;
+    max-width: 50px;
+	object-fit: cover;
+}
+.right{
+    margin-left:50%;
+  background-color: aqua;
+}
