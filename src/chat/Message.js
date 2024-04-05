@@ -12,9 +12,6 @@ function Message({message}) {
 
     <div className={`chat-bubble ${message.uid === user.uid ? "right" : ""}`}>
     {message.uid === user.uid ? "right" : "left"}
-    {/* {message.uid}
-    <break></break>
-    {user.uid} */}
     <img
       className="logo"
       src={message.avatar}
